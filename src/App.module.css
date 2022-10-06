@@ -1,0 +1,29 @@
+.darkMode {
+  background-color: var(--Very-Dark-Blue);
+  color:white;
+}
+.lightMode {
+  color:var(--Very-Dark-Blue-TX);
+  background-color: var(--Very-Light-Gray);
+}
+.bodydarkbg {
+  background-color: var(--Very-Dark-Blue-BK);
+}
+.lightdarkbg {
+  background-color: var(--Very-Light-Gray);
+}
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 6.2rem 0;
+  min-height: 100vh;
+  
+}
+
+
+.filterContainer{
+  margin: 5rem 0;
+  background-color: gray;
+  height: 5rem;
+}

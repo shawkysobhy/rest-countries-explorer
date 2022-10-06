@@ -1,0 +1,66 @@
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.searchBar {
+  width: 30rem;
+  padding: 0.8rem 3rem;
+  background-color: var(--Dark-Blue);
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.search {
+  display: flex;
+  position: relative;
+}
+.search svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+
+  top: 50%;
+  left: 0;
+  margin-left: 1rem;
+  transform: translateY(-50%);
+}
+
+.searchBar::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  font-weight: 800;
+}
+
+.darkMode {
+  background-color: var(--Dark-Blue);
+  color: white;
+}
+.lightMode {
+  background-color: var(--Very-Light-Gray);
+  color: var(--Very-Dark-Blue-TX);
+}
+.lightMode .searchBar::placeholder {
+  color: var(--Very-Dark-Blue-TX);
+}
+.darkMode .searchBar::placeholder {
+  color: var(--Very-Light-Gray);
+}
+
+@media (max-width: 890px) {
+  .search {
+    width: 20rem;
+  }
+}
+@media (max-width: 440px) {
+  .searchBar {
+    width: 90%;
+  }
+}

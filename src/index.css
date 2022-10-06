@@ -1,0 +1,47 @@
+:root {
+  --Dark-Blue: hsl(209, 23%, 22%); /* (Dark Mode Elements)*/
+  --Very-Dark-Blue-BK: #202c37; /*(Dark Mode Background)*/
+  --Very-Dark-Blue-TX: hsl(200, 15%, 8%); /* (Light Mode Text)*/
+  --Dark-Gray: hsl(0, 0%, 52%); /* (Light Mode Input)*/
+  --Very-Light-Gray: #fafafa; /* (Light Mode Background)*/
+  --White: hsl(0, 0%, 100%); /*(Dark Mode Text & Light Mode Elements)*/
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+img{
+  display: block;
+  width: 100%;
+}
+html{
+  font-size: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+.bodydarkbg{
+  background-color: var(--Very-Dark-Blue-BK);
+}
+.lightdarkbg{
+  background-color: var(--Very-Light-Gray);
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+

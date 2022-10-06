@@ -1,0 +1,60 @@
+.countryCard {
+  width:16.5rem;
+  margin: 0 auto;
+  overflow: hidden;
+    box-shadow: 0 0 3px 3px rgb(0 0 0 / 3%);
+  background-color: whitesmoke;
+  letter-spacing: 1px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+  
+}
+.countryCard:hover{
+  transform: translateY(-16px);
+}
+.imagecontainer {
+  height: 11rem;
+  overflow: hidden;
+  width: 100%;
+}
+.flagImage {
+  height: 100%;
+  object-fit: cover;
+}
+
+.Link {
+  text-decoration: none;
+}
+.Link:hover {
+  opacity: 0.8;
+}
+.darkMode {
+    background-color: #2b3945;
+  color: white;
+}
+.lightMode {
+  color: var(--Very-Dark-Blue-TX);
+  background-color: var(--Very-Light-Gray);
+}
+
+.countryCard_info {
+ display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2rem 2rem 1rem;
+}
+
+.countryCard_name {
+  font-weight: 800;
+  font-size: 1.2rem;
+
+  line-height: 1.rem;
+}
+.infoProperty {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.infoProperty span {
+  margin-right: 5px;
+  font-weight: 400;
+}
