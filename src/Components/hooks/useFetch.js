@@ -6,17 +6,15 @@ const useFetch = () => {
   const fetchCountries = async (configRequest, countryDataHandler) => {
     try {
       const response = await fetch(configRequest?.url);
-      
-      if (!response.ok) {
-        throw new Error();
-      }
+      // if (!response.ok) {
+      //   throw new Error("");
+      // }
       const data = await response.json();
-      
       countryDataHandler(data);
       setIsLoading(false);
-    } catch (err) {
-      setError(err.message || 'some thing went wrong');
-      console.log(err.message);
+    } catch (error) {
+      setError(error.message || 'some thing went wrong');
+      console.log(error);
     }
   };
 

@@ -15,8 +15,14 @@ function App() {
       <Header></Header>
       <main className={currentTheme}>
         <Routes>
-          <Route path="/rest-countries-explorer" element={<Countries />}></Route>
-          <Route path="/country/:countryName" element={<CountryInfo />}></Route>
+          <Route
+            path="/rest-countries-explorer"
+            element={<Countries />}
+          ></Route>
+          <Route
+            path="/rest-countries-explorer/country/:countryName"
+            element={<CountryInfo />}
+          ></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </main>

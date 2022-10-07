@@ -14,20 +14,22 @@ const Countries = () => {
   const countryDataHandler = (data) => {
     let countryCardData = data.map((country) => {
       return {
-        common: country.name.common,
-        official: country.name.official,
+        name:country.name,
+        // common: country.name.common,
+        // official: country.name.official,
         capital: country.capital && country.capital[0],
         population: country.population,
-        flag: country.flags[0],
+        flag: country.flags.svg,
         region: country.region,
       };
     });
+    
     setCountries(countryCardData);
   };
   useEffect(() => {
     fetchCountries(
       {
-        url: `https://restcountries.com/v3/${
+        url: `https://restcountries.com/v2/${
           region === 'all' ? 'all' : `/region/${region}`
         }`,
       },

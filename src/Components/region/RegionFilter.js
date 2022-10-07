@@ -3,7 +3,6 @@ import classes from './RegionFilter.module.css';
 import React from 'react';
 import { useContext } from 'react';
 import ThemeContext from '../../context/ThemeContext';
-import { getSuggestedQuery } from '@testing-library/react';
 
 // const RegtionFilter = ({ setRegion, darkMode }) => {
 //   const theme = darkMode ? classes.darkMode : classes.lightMode;

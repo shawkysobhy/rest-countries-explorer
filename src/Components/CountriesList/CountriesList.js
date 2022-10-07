@@ -12,7 +12,7 @@ export const CountriesList = ({ countries }) => {
           {countries.map((country) => {
             return (
               <CountryCard
-                key={country.official}
+                key={country.name}
                 country={country}
               ></CountryCard>
             );

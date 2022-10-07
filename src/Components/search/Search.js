@@ -10,7 +10,7 @@ export const Search = ({ setfilterdCountries, countries, setFilterFire }) => {
   const SearchHandler = (query) => {
     if (query) {
       const filterdCountries = countries.filter((country) => {
-        return [country.common, country.capital]
+        return [country.name, country.capital]
           .join('')
           .toLowerCase()
           .includes(query.toLowerCase());

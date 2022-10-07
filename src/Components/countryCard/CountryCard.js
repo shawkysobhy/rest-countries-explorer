@@ -11,7 +11,10 @@ const CountryCard = ({ country }) => {
     <li>
       <Link
         className={classes.Link}
-        to={`/country/${country.common.replace(/\s/g, '%20')}`}
+        to={`/rest-countries-explorer/country/${country.name.replace(
+          /\s/g,
+          '%20'
+        )}`}
       >
         <div className={`${classes.countryCard} ${currentTheme}`}>
           <div className={classes.imagecontainer}>
@@ -21,9 +24,7 @@ const CountryCard = ({ country }) => {
           <ul className={`${classes.countryCard_info}`}>
             <li>
               {' '}
-              <h2 className={`${classes.countryCard_name}`}>
-                {country.common}
-              </h2>
+              <h2 className={`${classes.countryCard_name}`}>{country.name}</h2>
             </li>
             <li className={classes.infoProperty}>
               <span>Population:</span>

@@ -16,9 +16,9 @@ export const CountryInfo = (props) => {
   const [countryBorders, setCountryBorders] = useState([]);
   const [country, setCountry] = useState([]);
   const getCountryInfo = (data) => {
-    let re = data[0];
-    setCountry((prev) => re);
-    if (re?.borders) {
+    
+    setCountry((prev) => data[0]);
+    if (data[0]?.borders) {
       findCountryBorders(data[0].borders);
     }
   };
@@ -75,35 +75,35 @@ export const CountryInfo = (props) => {
                 <h1 className={classes.official}>{country.name}</h1>
                 <div className={classes.lists}>
                   <ul>
-                    <li>
+                    <li key={country.nativeName}>
                       <span>Native Name : </span>
                       {country.nativeName}
                     </li>
-                    <li>
+                    <li key={country.population}>
                       <span>population : </span>
                       {country.population.toLocaleString()}
                     </li>
-                    <li>
+                    <li key={country.region}>
                       {' '}
                       <span>region : </span>
                       {country.region}
                     </li>
-                    <li>
+                    <li key={country.subregion}>
                       {' '}
                       <span>sub regiong : </span>
                       {country.subregion}
                     </li>
-                    <li>
+                    <li key={country.capital}>
                       <span>Capital : </span>
                       {country.capital}
                     </li>
                   </ul>
                   <ul>
-                    <li>
+                    <li key={country.area}>
                       <span> Area : </span>
                       {country.area.toLocaleString()} Km <sup>2</sup>
                     </li>
-                    <li>
+                    <li key={country.topLevelDomain}>
                       {' '}
                       <span>top Level Domain : </span>
                       {country.topLevelDomain}
@@ -126,7 +126,7 @@ export const CountryInfo = (props) => {
                         >
                           <Link
                             onClick={window.scroll(0, 0)}
-                            key={index}
+                            key={borderCountry}
                             className={classes.borderCountry}
                             to={`/country/${borderCountry}`}
                           >
