@@ -17,7 +17,7 @@ const Header = () => {
       <nav>
         <div className={classes.container}>
           <Link
-            to="/"
+            to="/rest-countries-explorer"
             element={<App />}
             style={{ color: 'inherit', textDecoration: 'inherit' }}
           >
