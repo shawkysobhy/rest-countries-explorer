@@ -128,7 +128,7 @@ export const CountryInfo = (props) => {
                             onClick={window.scroll(0, 0)}
                             key={borderCountry}
                             className={classes.borderCountry}
-                            to={`/country/${borderCountry}`}
+                            to={`/rest-countries-explorer/country/${borderCountry}`}
                           >
                             {borderCountry}
                           </Link>
