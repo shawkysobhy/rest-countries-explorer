@@ -18,7 +18,7 @@ export const Search = ({ setfilterdCountries, countries, setFilterFire }) => {
       setfilterdCountries(filterdCountries);
       setFilterFire(true);
     }
-    if (query == '') setFilterFire(false);
+    if (query === '') setFilterFire(false);
   };
   return (
     <form className={`${classes.form}`} onSubmit={(e) => e.preventDefault()}>
@@ -31,7 +31,7 @@ export const Search = ({ setfilterdCountries, countries, setFilterFire }) => {
         <input
           type="text"
           className={`${classes.searchBar} ${theme}`}
-          placeholder="country by Name , Capital, Currency"
+          placeholder="country by Name,Capital"
           onChange={(e) => {
             SearchHandler(e.target.value);
           }}

@@ -26,7 +26,6 @@
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
-
   top: 50%;
   left: 0;
   margin-left: 1rem;
@@ -56,11 +55,11 @@
 
 @media (max-width: 890px) {
   .search {
-    width: 20rem;
+     max-width: 20rem;
   }
 }
 @media (max-width: 440px) {
   .searchBar {
-    width: 90%;
+    max-width: 15rem;
   }
 }

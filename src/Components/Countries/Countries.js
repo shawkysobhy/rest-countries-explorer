@@ -12,7 +12,6 @@ const Countries = () => {
   const [filterFire, setFilterFire] = useState(false);
   const { isLoading, error, fetchCountries } = useFetch();
   const countryDataHandler = (data) => {
-    console.log(data)
     let countryCardData = data.map((country) => {
       return {
         common: country.name.common,
@@ -36,8 +35,6 @@ const Countries = () => {
     );
     setFilterFire(false);
   }, [region]);
-  console.log('filter fire', filterFire);
-  console.log(countries);
   return (
     <>
       <div className={classes.form}>

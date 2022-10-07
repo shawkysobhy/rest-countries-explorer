@@ -38,3 +38,12 @@ background-color: var(--Very-Light-Gray);
 option{
     border-radius: 5px;
 }
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -48,10 +48,6 @@ export const CountryInfo = (props) => {
   const loadMainPage = () => {
     navigate(-1);
   };
-  // const chnageCountrHandler = (e) => {
-  //   setSingleCountry((prev) => e.target.value);
-  // };
-  console.log(isLoading);
   return (
     <>
       {isLoading ? (
@@ -59,7 +55,9 @@ export const CountryInfo = (props) => {
       ) : (
         <div className={`${classes.container} ${currentTheme}`}>
           <button
-            className={classes.backbutton}
+            className={`${classes.backbutton}  ${
+              darkMode ? classes.darkButton : classes.whiteButton
+            }`}
             onClick={(e) => {
               loadMainPage(e.target.value);
             }}
@@ -83,7 +81,7 @@ export const CountryInfo = (props) => {
                     </li>
                     <li>
                       <span>population : </span>
-                      {country.population}
+                      {country.population.toLocaleString()}
                     </li>
                     <li>
                       {' '}
@@ -103,7 +101,7 @@ export const CountryInfo = (props) => {
                   <ul>
                     <li>
                       <span> Area : </span>
-                      {country.area} Km <sup>2</sup>
+                      {country.area.toLocaleString()} Km <sup>2</sup>
                     </li>
                     <li>
                       {' '}
@@ -121,7 +119,11 @@ export const CountryInfo = (props) => {
                   {countryBorders.length ? (
                     countryBorders.map((borderCountry, index) => {
                       return (
-                        <div>
+                        <div
+                          className={
+                            darkMode ? classes.darkButton : classes.whiteButton
+                          }
+                        >
                           <Link
                             onClick={window.scroll(0, 0)}
                             key={index}

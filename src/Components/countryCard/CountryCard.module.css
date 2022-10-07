@@ -1,12 +1,12 @@
 .countryCard {
   width:16.5rem;
   margin: 0 auto;
+  border-radius: 1rem;
   overflow: hidden;
     box-shadow: 0 0 3px 3px rgb(0 0 0 / 3%);
   background-color: whitesmoke;
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
-  border-radius: 5px;
   
 }
 .countryCard:hover{
@@ -24,6 +24,7 @@
 
 .Link {
   text-decoration: none;
+  color:inherit;
 }
 .Link:hover {
   opacity: 0.8;
@@ -48,7 +49,7 @@
   font-weight: 800;
   font-size: 1.2rem;
 
-  line-height: 1.rem;
+  line-height: 1.5;
 }
 .infoProperty {
   font-weight: 600;
