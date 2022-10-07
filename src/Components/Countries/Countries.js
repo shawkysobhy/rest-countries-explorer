@@ -17,7 +17,7 @@ const Countries = () => {
         name:country.name,
         // common: country.name.common,
         // official: country.name.official,
-        capital: country.capital && country.capital[0],
+        capital: country.capital,
         population: country.population,
         flag: country.flags.svg,
         region: country.region,
