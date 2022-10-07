@@ -38,7 +38,7 @@ export const CountryInfo = (props) => {
   useEffect(() => {
     fetchCountries(
       {
-        url: `https://restcountries.com/v3/name/${countryName}`,
+        url: `https://restcountries.com/v2/name/${countryName}`,
       },
       getCountryInfo
     );
