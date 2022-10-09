@@ -1,14 +1,14 @@
-<img src=""></img>
+<img src="https://raw.githubusercontent.com/shawky55/rest-countries-explorer/master/design/screenshot/desktop-screenshot.png"></img>
 
 <h1 align="center">REST Countries API with color theme switcher</h1>
 
 <div align="center">
   <h3>
-    <a href="" color="white">
+    <a href="https://shawky55.github.io/rest-countries-explorer/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href="">
+    <a href="https://github.com/shawky55/rest-countries-explorer">
       Solution
     </a>
    <span> | </span>
@@ -55,7 +55,7 @@ You can use any JavaScript framework/library on the front-end such as React or V
 
 ## Acknowledgments
 
-A big thank you to anyone providing feedback on my <a href="">solution</a>. It definitely helps to find new ways to code and find easier solutions!
+A big thank you to anyone providing feedback on my <a href="https://www.frontendmentor.io/solutions/rest-countries-explorer-with-react-yBGnG3vfTU">solution</a>. It definitely helps to find new ways to code and find easier solutions!
 
 ## next
 
