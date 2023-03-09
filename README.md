@@ -11,10 +11,6 @@
     <a href="https://github.com/shawkysobhy/rest-countries-explorer">
       Solution
     </a>
-   <span> | </span>
-    <a href="">
-      Challenge
-    </a>
   </h3>
 </div>
 <br>
