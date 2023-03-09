@@ -14,7 +14,6 @@ const useFetch = () => {
       setIsLoading(false);
     } catch (error) {
       setError(error.message || 'some thing went wrong');
-      console.log(error);
     }
   };
 
