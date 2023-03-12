@@ -108,10 +108,6 @@ export const CountryInfo = (props) => {
                       <span>top Level Domain : </span>
                       {country.topLevelDomain}
                     </li>
-                    {/* <li>
-                      <span>currencies : </span>
-                      {country.currencies[0].name}
-                    </li> */}
                   </ul>
                 </div>
                 <ul className={classes.borderMenu}>
@@ -123,10 +119,10 @@ export const CountryInfo = (props) => {
                           className={
                             darkMode ? classes.darkButton : classes.whiteButton
                           }
+                          key={index}
                         >
                           <Link
                             onClick={window.scroll(0, 0)}
-                            key={borderCountry}
                             className={classes.borderCountry}
                             to={`/rest-countries-explorer/country/${borderCountry}`}
                           >
