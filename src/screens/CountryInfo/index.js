@@ -1,11 +1,12 @@
+/** @format */
+
 import React, { useEffect, useState, useContext } from 'react';
 import classes from './CountryInfo.module.css';
 import { useParams, Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
 import ThemeContext from '../../context/ThemeContext';
-import LoadingSpinner from '../isLoading/LoadingSpinner';
-import useFetch from '../hooks/useFetch';
+import { LoadingSpinner } from '../../components';
+import { useFetch } from '../../hooks/useFetch';
 export const CountryInfo = (props) => {
   const ctx = useContext(ThemeContext);
   const { isLoading, error, fetchCountries } = useFetch();
@@ -16,7 +17,6 @@ export const CountryInfo = (props) => {
   const [countryBorders, setCountryBorders] = useState([]);
   const [country, setCountry] = useState([]);
   const getCountryInfo = (data) => {
-    
     setCountry((prev) => data[0]);
     if (data[0]?.borders) {
       findCountryBorders(data[0].borders);
@@ -60,8 +60,7 @@ export const CountryInfo = (props) => {
             }`}
             onClick={(e) => {
               loadMainPage(e.target.value);
-            }}
-          >
+            }}>
             <span>&#8592; </span>Back
           </button>
           <article>
@@ -122,14 +121,12 @@ export const CountryInfo = (props) => {
                         <div
                           className={
                             darkMode ? classes.darkButton : classes.whiteButton
-                          }
-                        >
+                          }>
                           <Link
                             onClick={window.scroll(0, 0)}
                             key={borderCountry}
                             className={classes.borderCountry}
-                            to={`/rest-countries-explorer/country/${borderCountry}`}
-                          >
+                            to={`/rest-countries-explorer/country/${borderCountry}`}>
                             {borderCountry}
                           </Link>
                         </div>
@@ -148,4 +145,3 @@ export const CountryInfo = (props) => {
     </>
   );
 };
-

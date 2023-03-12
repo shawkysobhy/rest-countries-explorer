@@ -63,21 +63,6 @@ li {
   border: none;
   border-radius: 4px;
 }
-
-@media (max-width: 1200px) {
-  article {
-    grid-template-columns: 1fr;
-    gap: 50px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 800px) {
-  .lists {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 .borderCountry {
   font-size: 1.2rem;
   color: inherit;
@@ -111,4 +96,20 @@ li {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+
+@media (max-width: 1200px) {
+  article {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .lists {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

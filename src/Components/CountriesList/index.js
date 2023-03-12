@@ -1,7 +1,7 @@
-import classes from './CountriesList.module.css';
-import CountryCard from '../../Components';
 
-import NotFound from '../NotFound/NotFound';
+import classes from './CountriesList.module.css';
+import { CountryCard} from '../../components';
+import { NotFound } from '../../screens';
 export const CountriesList = ({ countries }) => {
   return (
     <>
@@ -11,10 +11,7 @@ export const CountriesList = ({ countries }) => {
         <ul className={`${classes.countrieslist}`}>
           {countries.map((country) => {
             return (
-              <CountryCard
-                key={country.name}
-                country={country}
-              ></CountryCard>
+              <CountryCard key={country.name} country={country}></CountryCard>
             );
           })}
         </ul>
@@ -22,5 +19,3 @@ export const CountriesList = ({ countries }) => {
     </>
   );
 };
-
-
