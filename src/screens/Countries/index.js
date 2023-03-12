@@ -1,7 +1,8 @@
+/** @format */
 
 import { useState, useEffect } from 'react';
 import classes from './countries.module.css';
-import {useFetch} from '../../hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 import {
   LoadingSpinner,
   Search,

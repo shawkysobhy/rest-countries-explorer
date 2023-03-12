@@ -7,7 +7,10 @@ export const useFetch = () => {
     try {
       const response = await fetch(configRequest?.url);
       const data = await response.json();
-      countryDataHandler(data);
+      if (data) {
+        countryDataHandler(data);
+      }
+
       setIsLoading(false);
     } catch (error) {
       setError(error.message || 'some thing went wrong');

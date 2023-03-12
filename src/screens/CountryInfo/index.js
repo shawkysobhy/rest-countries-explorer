@@ -36,6 +36,7 @@ export const CountryInfo = (props) => {
   };
 
   useEffect(() => {
+    console.log(countryName)
     fetchCountries(
       {
         url: `https://restcountries.com/v2/name/${countryName}`,
@@ -107,10 +108,6 @@ export const CountryInfo = (props) => {
                       <span>top Level Domain : </span>
                       {country.topLevelDomain}
                     </li>
-                    {/* <li>
-                      <span>currencies : </span>
-                      {country.currencies[0].name}
-                    </li> */}
                   </ul>
                 </div>
                 <ul className={classes.borderMenu}>
@@ -119,12 +116,12 @@ export const CountryInfo = (props) => {
                     countryBorders.map((borderCountry, index) => {
                       return (
                         <div
+                          key={index}
                           className={
                             darkMode ? classes.darkButton : classes.whiteButton
                           }>
                           <Link
                             onClick={window.scroll(0, 0)}
-                            key={borderCountry}
                             className={classes.borderCountry}
                             to={`/rest-countries-explorer/country/${borderCountry}`}>
                             {borderCountry}
