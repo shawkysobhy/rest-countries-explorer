@@ -7,7 +7,6 @@ const ThemeContext = React.createContext({
 export const ThemeContextProvider = (props) => {
   const [darkMode, setDarkMode] = useState(true);
   const themeHandler = () => {
-    console.log('hi');
     return setDarkMode((prev) => !prev);
   };
 
