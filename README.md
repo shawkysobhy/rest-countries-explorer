@@ -4,16 +4,12 @@
 
 <div align="center">
   <h3>
-    <a href="https://shawky55.github.io/rest-countries-explorer/" color="white">
+    <a href="https://shawkysobhy.github.io/rest-countries-explorer/" color="white">
       Live
     </a>
     <span> | </span>
-    <a href="https://github.com/shawky55/rest-countries-explorer">
+    <a href="https://github.com/shawkysobhy/rest-countries-explorer">
       Solution
-    </a>
-   <span> | </span>
-    <a href="">
-      Challenge
     </a>
   </h3>
 </div>
