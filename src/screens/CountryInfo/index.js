@@ -1,42 +1,26 @@
-/** @format */
 
 import React, { useEffect, useState, useContext } from 'react';
 import classes from './CountryInfo.module.css';
-import { useParams, Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { useParams ,useNavigate } from 'react-router-dom';
 import ThemeContext from '../../context/ThemeContext';
-import { LoadingSpinner } from '../../components';
+import { LoadingSpinner, Borders } from '../../components';
 import { useFetch } from '../../hooks/useFetch';
-export const CountryInfo = (props) => {
+export const CountryInfo = () => {
+  const navigate = useNavigate();
+  const { countryName } = useParams();
   const ctx = useContext(ThemeContext);
   const { isLoading, error, fetchCountries } = useFetch();
   const { darkMode } = ctx;
   const currentTheme = darkMode ? classes.darkMode : classes.lightMode;
-  const navigate = useNavigate();
-  const { countryName } = useParams();
   const [countryBorders, setCountryBorders] = useState([]);
   const [country, setCountry] = useState([]);
   const getCountryInfo = (data) => {
     setCountry((prev) => data[0]);
     if (data[0]?.borders) {
-      findCountryBorders(data[0].borders);
+      setCountryBorders(prev=>data[0].borders);
     }
   };
-  const findCountryBorders = (borders) => {
-    borders.forEach((border) => {
-      fetchCountries(
-        {
-          url: `https://restcountries.com/v2/alpha/${border}`,
-        },
-        (data) => {
-          setCountryBorders((prev) => [...prev, data?.name]);
-        }
-      );
-    });
-  };
-
   useEffect(() => {
-    console.log(countryName)
     fetchCountries(
       {
         url: `https://restcountries.com/v2/name/${countryName}`,
@@ -110,32 +94,13 @@ export const CountryInfo = (props) => {
                     </li>
                   </ul>
                 </div>
-                <ul className={classes.borderMenu}>
-                  <h2>Country Borders</h2>:
-                  {countryBorders.length ? (
-                    countryBorders.map((borderCountry, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className={
-                            darkMode ? classes.darkButton : classes.whiteButton
-                          }>
-                          <Link
-                            onClick={window.scroll(0, 0)}
-                            className={classes.borderCountry}
-                            to={`/rest-countries-explorer/country/${borderCountry}`}>
-                            {borderCountry}
-                          </Link>
-                        </div>
-                      );
-                    })
-                  ) : (
-                    <div>With no borders</div>
-                  )}
-                </ul>
               </div>
             </div>
-            <></>
+            <Borders
+              countryBorders={countryBorders}
+              darkMode={darkMode}
+              name={country.name}
+            />
           </article>
         </div>
       )}

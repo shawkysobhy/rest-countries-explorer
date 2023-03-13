@@ -8,18 +8,12 @@
 article {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  row-gap: 2rem;
+  column-gap: 4rem;
   line-height: 1.8;
+  width: 85%;
+  margin: auto;
 }
-.darkMode {
-  background-color: var(--Very-Dark-Blue);
-  color: white;
-}
-.lightMode {
-  color: var(--Very-Dark-Blue-TX);
-  background-color: var(--Very-Light-Gray);
-}
-
 .countryInfoFlag {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 5px;
@@ -34,6 +28,15 @@ article {
   font-size: 2.5rem;
   letter-spacing: 2px;
   text-transform: capitalize;
+}
+
+.darkMode {
+  background-color: var(--Very-Dark-Blue);
+  color: white;
+}
+.lightMode {
+  color: var(--Very-Dark-Blue-TX);
+  background-color: var(--Very-Light-Gray);
 }
 
 .lists {
@@ -63,19 +66,6 @@ li {
   border: none;
   border-radius: 4px;
 }
-.borderCountry {
-  font-size: 1.2rem;
-  color: inherit;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-    box-shadow: 0 0 3px 3px rgb(0 0 0 / 3%);
-    padding: 0.4rem 1.2rem;
-    border-radius: 5px;
-}
-.borderCountry:hover{
-  opacity: .7;
-}
 .darkButton{
   background-color: #2b3945;
   color:white
@@ -83,12 +73,6 @@ li {
 .whiteButton{
   background-color: white;
   color:black ;
-}
-.borderMenu {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .containerList {
@@ -104,6 +88,7 @@ li {
     grid-template-columns: 1fr;
     gap: 50px;
     margin: 0 auto;
+    width: 100%;
   }
   .countryInfoFlag{
     max-width: 80%;

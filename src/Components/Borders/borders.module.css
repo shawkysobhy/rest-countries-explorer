@@ -1,0 +1,27 @@
+.borderCountry {
+  font-size: 1.2rem;
+  color: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+    box-shadow: 0 0 3px 3px rgb(0 0 0 / 3%);
+    padding: 0.4rem 1.2rem;
+    border-radius: 5px;
+}
+.borderCountry:hover{
+  opacity: .7;
+}
+.darkButton{
+  background-color: #2b3945;
+  color:white
+}
+.whiteButton{
+  background-color: white;
+  color:black ;
+}
+.borderMenu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}

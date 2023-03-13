@@ -10,7 +10,6 @@ export const useFetch = () => {
       if (data) {
         countryDataHandler(data);
       }
-
       setIsLoading(false);
     } catch (error) {
       setError(error.message || 'some thing went wrong');
