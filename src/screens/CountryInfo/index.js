@@ -3,13 +3,13 @@ import React, { useEffect, useState, useContext } from 'react';
 import classes from './CountryInfo.module.css';
 import { useParams ,useNavigate } from 'react-router-dom';
 import ThemeContext from '../../context/ThemeContext';
-import { LoadingSpinner, Borders } from '../../components';
+import { LoadingSpinner, Borders ,CountryProp } from '../../components';
 import { useFetch } from '../../hooks/useFetch';
 export const CountryInfo = () => {
   const navigate = useNavigate();
   const { countryName } = useParams();
   const ctx = useContext(ThemeContext);
-  const { isLoading, error, fetchCountries } = useFetch();
+  const { isLoading, fetchCountries } = useFetch();
   const { darkMode } = ctx;
   const currentTheme = darkMode ? classes.darkMode : classes.lightMode;
   const [countryBorders, setCountryBorders] = useState([]);
@@ -59,39 +59,30 @@ export const CountryInfo = () => {
                 <h1 className={classes.official}>{country.name}</h1>
                 <div className={classes.lists}>
                   <ul>
-                    <li key={country.nativeName}>
-                      <span>Native Name : </span>
-                      {country.nativeName}
-                    </li>
-                    <li key={country.population}>
-                      <span>population : </span>
-                      {country.population.toLocaleString()}
-                    </li>
-                    <li key={country.region}>
-                      {' '}
-                      <span>region : </span>
-                      {country.region}
-                    </li>
-                    <li key={country.subregion}>
-                      {' '}
-                      <span>sub regiong : </span>
-                      {country.subregion}
-                    </li>
-                    <li key={country.capital}>
-                      <span>Capital : </span>
-                      {country.capital}
-                    </li>
+                    <CountryProp
+                      label='Native Name : '
+                      info={country.nativeName}
+                    />
+                    <CountryProp
+                      label='population:'
+                      info={country.population.toLocaleString()}
+                    />
+                    <CountryProp label='region:' info={country.region} />
+                    <CountryProp
+                      label='sub regiong:'
+                      info={country.subregion}
+                    />
+                    <CountryProp label='Capital:' info={country.capital} />
                   </ul>
                   <ul>
-                    <li key={country.area}>
-                      <span> Area : </span>
-                      {country.area.toLocaleString()} Km <sup>2</sup>
-                    </li>
-                    <li key={country.topLevelDomain}>
-                      {' '}
-                      <span>top Level Domain : </span>
-                      {country.topLevelDomain}
-                    </li>
+                    <CountryProp
+                      label='Area:'
+                      info={`${country.area.toLocaleString()} Km`}
+                    />
+                    <CountryProp
+                      label='top Level Domain:'
+                      info={country.topLevelDomain}
+                    />
                   </ul>
                 </div>
               </div>

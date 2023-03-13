@@ -11,7 +11,7 @@ function App() {
   let currentTheme = darkMode ? classes.darkMode : classes.lightMode;
   return (
     <>
-      <Header></Header>
+      <Header/>
       <main className={currentTheme}>
         <Routes>
           <Route
@@ -19,7 +19,7 @@ function App() {
             element={<Countries />}></Route>
           <Route
             path='/rest-countries-explorer/country/:countryName'
-            element={<CountryInfo  />}></Route>
+            element={<CountryInfo/>}></Route>
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </main>

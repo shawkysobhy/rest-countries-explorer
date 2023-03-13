@@ -1,5 +1,3 @@
-/** @format */
-
 import { useState, useEffect } from 'react';
 import classes from './countries.module.css';
 import { useFetch } from '../../hooks/useFetch';
@@ -45,17 +43,17 @@ export const Countries = () => {
         <Search
           setfilterdCountries={setfilterdCountries}
           countries={countries}
-          setFilterFire={setFilterFire}></Search>
-        <RegtionFilter regionHandler={setRegion}></RegtionFilter>
+          setFilterFire={setFilterFire}/>
+        <RegtionFilter regionHandler={setRegion}/>
       </div>
       {isLoading ? (
-        <LoadingSpinner></LoadingSpinner>
+        <LoadingSpinner/>
       ) : (
         <>
           {filterFire ? (
-            <CountriesList countries={filterdCountries}></CountriesList>
+            <CountriesList countries={filterdCountries}/>
           ) : (
-            <CountriesList countries={countries}></CountriesList>
+            <CountriesList countries={countries}/>
           )}
         </>
       )}

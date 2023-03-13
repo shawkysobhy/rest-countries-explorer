@@ -20,7 +20,6 @@ export const  CountryCard = ({ country }) => {
           <div className={classes.imagecontainer}>
             <img className={classes.flagImage} src={country.flag} alt="flag" />
           </div>
-
           <ul className={`${classes.countryCard_info}`}>
             <li>
               {' '}
